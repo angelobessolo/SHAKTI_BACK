@@ -1,0 +1,23 @@
+1. Para levantar  db en el back comando -> npm run start:dev
+2. Para levantar docker desktop docker compose up -d en, si quiero bajarlo elimino el contenedot y vuelvo a correr el
+comando   
+
+
+
+Instalaciones:
+
+npm i class-validator class-transformer --> Para validaciones de tipado de datos en los Dtos creados
+
+Se debe pegar esto en el main.ts
+app.useGlobalPipes(
+    new ValidationPipe({
+    whitelist: true,
+    forbidNonWhitelisted: true,
+    })
+);
+
+
+PASO A PASO CREACION DE SERVICIOS
+
+1. Podemos crear todo el resource del modulo -> nest g resource auth -> auth se cambia por el nombre 
+del modulo con los endpoints etc 
