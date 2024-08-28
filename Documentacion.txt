@@ -8,11 +8,11 @@ Instalaciones:
 
 npm i class-validator class-transformer --> Para validaciones de tipado de datos en los Dtos creados
 
-Se debe pegar esto en el main.ts
+Se debe pegar esto en el main.ts para los pipes y que funciones los dto correctamente
 app.useGlobalPipes(
     new ValidationPipe({
-    whitelist: true,
-    forbidNonWhitelisted: true,
+     whitelist: true,
+     forbidNonWhitelisted: true,
     })
 );
 

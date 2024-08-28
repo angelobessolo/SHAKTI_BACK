@@ -8,6 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 import { RoleModule } from 'src/role/role.module';
 import { ModuleModule } from 'src/module/module.module';
 import { SubmoduleModule } from 'src/submodule/submodule.module';
+import { PlanearModule } from 'src/planear/planear.module';
 
 @Module({
   controllers: [AuthController],

@@ -8,6 +8,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { AuthModule } from 'src/auth/auth.module';
 import { RoleModule } from 'src/role/role.module';
 import { SubmoduleModule } from 'src/submodule/submodule.module';
+import { PlanearModule } from 'src/planear/planear.module';
 
 @Module({
   controllers: [ModuleController],

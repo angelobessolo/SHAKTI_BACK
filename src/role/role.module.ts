@@ -7,6 +7,7 @@ import { Role, RoleSchema } from './entities/role.entity';
 import { AuthModule } from 'src/auth/auth.module';
 import { ModuleModule } from 'src/module/module.module';
 import { SubmoduleModule } from 'src/submodule/submodule.module';
+import { PlanearModule } from 'src/planear/planear.module';
 
 @Module({
   controllers: [RoleController],

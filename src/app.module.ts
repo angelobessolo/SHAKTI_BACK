@@ -8,12 +8,15 @@ import { UserModule } from './user/user.module';
 import { ModuleModule } from './module/module.module';
 import { SubmoduleModule } from './submodule/submodule.module';
 import { RoleModule } from './role/role.module';
+import { PlanearModule } from './planear/planear.module';
+import { ReportModule } from './report/report.module';
+import { ConfigurationModule } from './configuration/configuration.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot(), //Imports of config,
     MongooseModule.forRoot(process.env.MONGO_URI), // Environment variable
-    AuthModule, UserModule, ModuleModule, SubmoduleModule, RoleModule
+    AuthModule, UserModule, ModuleModule, SubmoduleModule, RoleModule, PlanearModule, ReportModule, ConfigurationModule
   ],
   controllers: [],
   providers: [],

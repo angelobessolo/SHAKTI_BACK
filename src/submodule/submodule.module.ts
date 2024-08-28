@@ -6,6 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Submodule, SubmoduleSchema } from './entities/submodule.entity';
 import { ModuleModule } from 'src/module/module.module';
 import { RoleModule } from 'src/role/role.module';
+import { PlanearModule } from 'src/planear/planear.module';
 
 @Module({
   controllers: [SubmoduleController],
