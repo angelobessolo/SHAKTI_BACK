@@ -16,6 +16,7 @@ import { ConfigurationModule } from './configuration/configuration.module';
   imports: [
     ConfigModule.forRoot(), //Imports of config,
     MongooseModule.forRoot(process.env.MONGO_URI, {
+      // https://railway.app/
       dbName: 'shakti-db'
     }), // Environment variable
     AuthModule, UserModule, ModuleModule, SubmoduleModule, RoleModule, PlanearModule, ReportModule, ConfigurationModule
