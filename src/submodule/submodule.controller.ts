@@ -10,7 +10,7 @@ export class SubmoduleController {
     private readonly submoduleService: SubmoduleService
   ) {}
 
-  @UseGuards (AuthGuard)
+  // @UseGuards (AuthGuard)
   @Post()
   create(@Request() req: Request, @Body() createSubmoduleDto: CreateSubmoduleDto) {
     const user = req['user'];
