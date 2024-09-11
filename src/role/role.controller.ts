@@ -10,24 +10,26 @@ export class RoleController {
     private readonly roleService: RoleService
   ) {}
   
-  // @UseGuards( AuthGuard )
+  @UseGuards( AuthGuard )
   @Post()
   create(@Request() req: Request, @Body() createRoleDto: CreateRoleDto) {
     const user = req['user'];
     return this.roleService.create(createRoleDto, user);
   }
 
-  // @UseGuards( AuthGuard )
+  @UseGuards( AuthGuard )
   @Get('byName/:roleName')
   findRoleByName(@Param('roleName') roleName: string) {
     return this.roleService.findRoleByName(roleName);
   }
 
+  @UseGuards( AuthGuard )
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.roleService.findOne(+id);
   }
 
+  @UseGuards( AuthGuard )
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateRoleDto: UpdateRoleDto) {
     return this.roleService.update(+id, updateRoleDto);

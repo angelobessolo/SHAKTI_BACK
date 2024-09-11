@@ -22,6 +22,7 @@ export class AuthController {
   }
 
   @UseGuards( AuthGuard )
+  @UseGuards( AuthGuard )
   @Get()
   findAll( @Request() req: Request ) {
     const user = req['user'];
@@ -43,16 +44,19 @@ export class AuthController {
     } 
   }
 
+  @UseGuards( AuthGuard )
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.authService.findOne(+id);
   }
 
+  @UseGuards( AuthGuard )
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateAuthDto: UpdateAuthDto) {
     return this.authService.update(+id, updateAuthDto);
   }
 
+  @UseGuards( AuthGuard )
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.authService.remove(+id);

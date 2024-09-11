@@ -10,14 +10,14 @@ export class ModuleController {
     private readonly moduleService: ModuleService,
   ) {}
 
-  // @UseGuards( AuthGuard )
+  @UseGuards( AuthGuard )
   @Post()
   create(@Request() req: Request, @Body() createModuleDto: CreateModuleDto) {
     const user = req['user'];
     return this.moduleService.create(createModuleDto, user);
   }
 
-  // @UseGuards( AuthGuard )
+  @UseGuards( AuthGuard )
   @Get()
   findAll(@Request() req: Request) {
     const user = req['user'];
@@ -34,11 +34,13 @@ export class ModuleController {
   //   return this.moduleService.findOne(+id);
   // }
 
+  @UseGuards( AuthGuard )
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateModuleDto: UpdateModuleDto) {
     return this.moduleService.update(+id, updateModuleDto);
   }
 
+  @UseGuards( AuthGuard )
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.moduleService.remove(+id);
